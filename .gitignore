@@ -1,0 +1,5 @@
+
+yatmap.komodoproject
+*.py
+js/values.json
+js/values_files/*

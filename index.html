@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The Yat Map: New Orleans area neighborhoods, according to you</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@marignymohican" />
+<meta name="twitter:creator" content="@marignymohican" />
+
+<meta property="og:title" content="The Yat Map: NOLA neighborhoods according to you"/>
+<meta property="og:url" content="https://rayknola.com/works/yatmap/"/>
+<meta property="og:site_name" content="NOLA.com"/>
+<meta property="og:image" content="https://rayknola.com/works/yatmap/img/Yat-Map-228x48.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="NOLA Neighborhoods is NOLA.com | The Times-Picayune’s in-depth exploration of how people in the New Orleans area perceive, shape, and are shaped by the places they live." />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="./css/layout.css" />
+<link rel="stylesheet" href="./css/display_model.css" /><!-- style adjustments for standalone html page -->
+
+<script
+			  src="//code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB-NyeRUJeToxvBVu8jl6TkF3S8YUtpho"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier/1.0.3/oms.min.js"></script>
+
+<script src="./js/map_styles.js"></script>
+<script src="./js/color.js"></script>
+<script src="./js/layout.js"></script>
+<script src="./js/addahood.js"></script>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "headline": "The Yat Map: New Orleans Neighborhoods According to You",
+    "url": "https://rayknola.com/works/yatmap/",
+    "thumbnailUrl": "https://rayknola.com/works/yatmap/img/Yat-Map-228x48.png",
+    "dateCreated": "2015-04-01T10:00:00Z",
+    "articleSection": "News",
+    "creator": ["RayK","Dan Swenson", "Lynette Johnson"],
+    "keywords": []
+  }
+</script>
+
+</head>
+
+<body>
+<!-- navigation and advertisement -->
+
+<!--
+<section id="nav">
+	<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="/"><div id="logo" class="navbar-brand-logo"></div></a>
+				<h1><img alt ="The Yat Map" src="./img/Yat-Map-176x41.png" /></h1>
+			</div>
+			<div class="collapse navbar-collapse">
+				<div id="yfSubmitNav" class="yfSubmitButton">Get Started!</div>
+				<ul class="nav navbar-nav">
+					<li><a href="/neighborhoods/">NOLA Neighborhoods</a></li>
+					<li><a href="http://www.nola.com/neighborhoods/2015/04/about_yat_map.html">About the Yat Map</a></li>
+					<!--
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="reading-position">More NOLA.com Links</span> <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="">Link #1</a></li>
+							<li><a href="">Link #another</a></li>
+						</ul>
+					</li>
+          -- >
+				</ul>
+				<ul id="socialshare" class="nav navbar-nav navbar-right share-buttons">
+					<a id="ssComments" href="http://www.nola.com/static/nola/static/html/social/mobile.html?entry_url=http://blog.nola.com/best_of_nolacom/2015/04/the_yat_map_new_orleans_neighb.html">
+						<span>View/Post&nbsp;Comments</span>
+					</a>
+					<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.nola.com/neighborhoods/maps/yatmap/index.html">
+						<i class="fa fa-facebook-square embiggen" style="color:#999"></i>
+					</a>
+					<a target="_blank" href="http://twitter.com/share?url=http://www.nola.com/neighborhoods/maps/yatmap/&text=The+Yat+Map:+New+Orleans+area+neighborhoods+according+to+you&hashtags=yatmap">
+						<i class="fa fa-twitter-square embiggen" style="color:#999"></i>
+					</a>
+				</ul>
+			</div><!-- /.nav-collapse -- >
+		</div><!-- /.container -- >
+	</div><!-- /.navbar -- >
+</section>
+-->
+
+
+
+
+<!-- form panel -->
+<section id="yatform">
+
+	<h1><img alt="The Yat Map" src="./img/Yat-Map-228x48.png" /></h1>
+
+	<p class="toptext">New Orleans area neighborhoods,<br />according to you</p>
+
+	<form class="jotform-form" action="http://submit.jotformpro.com/submit/42264553987971/" method="post" name="form_42264553987971" id="42264553987971" accept-charset="utf-8">
+		<input type="hidden" name="formID" value="42264553987971" />
+
+		<p>
+			<label class="form-label">What do you call your neighborhood?</label>
+			<input type="text" class=" form-textbox" data-type="input-textbox" id="input_3" name="q3_whatNeighborhood" size="20" value="" />
+		</p>
+		<p>
+			<label class="form-label form-label-left form-label-auto" id="label_4" for="input_4">What is your address? <span class="helper" id="helperaddress"><span class="helpertext">?</span></span></label>
+			<!-- address -->
+			<input type="text" class=" form-textbox" data-type="input-textbox" id="input_4" name="q4_whatIs" size="20" value="" />
+			<!-- city -->
+			<input type="text" class=" form-textbox" data-type="input-textbox" id="input_6" name="q6_cityOr" size="20" value="" />
+			<!-- latlon -->
+			<input type="hidden" class=" form-textbox" data-type="input-textbox" id="input_5" name="q5_latlong" size="20" value="" />
+		</p>
+		<div class="tooltiptext" id="tthelperaddress">
+			<span>A block number and street name are required.<br />(You do not have to supply your exact address)</span>
+			<span>For best results, spell out Street, Avenue, Boulevard etc.</span>
+			<span>Addresses are assumed to be within Louisiana</span>
+		</div>
+		
+		<p style="padding: 0px 10px 6px; text-align: left;">Be cool. Like everything else in New Orleans, it may take a moment. Refresh your browser for your dot to appear. </p>
+
+		<button id="input_2" type="submit" class="form-submit-button" style="display: none;"></button>
+
+		<input type="hidden" id="simple_spc" name="simple_spc" value="42264553987971" />
+		<script type="text/javascript">
+			document.getElementById("si" + "mple" + "_spc").value = "42264553987971-42264553987971";
+		</script>
+
+		<div id="yfSubmit" class="yfSubmitButton">Add your neighborhood!</div>
+	</form>
+</section>
+<!-- map panel -->
+<section id="map">
+	<div id="map-canvas"></div>
+</section>
+
+<!-- social panel -->
+<div id="ssPanel"><div id="ssPanelContent"><div id="ssPanelClose">x</div></div></div>
+<div id="ymfaq"></div>
+<div id="chooseresults"></div>
+
+</body>
+</html>
